@@ -27,7 +27,7 @@ app.patch("/estoque/vender/:id", (req, res) => {
 app.delete("/estoque/:id", (req, res) =>{
     const id = Number(req.params.id);
     const index = estoque.findIndex(p => p.id === id);
-    if(index -1){
+    if(index === -1){
         return res.status(404).json({mensagem: "ID informado inexistente!"});
     }
     estoque.splice(index, 1);
