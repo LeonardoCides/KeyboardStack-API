@@ -31,7 +31,7 @@ An efficient and minimalistic REST API designed to manage mechanical keyboard in
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/LeonardoCides/KeyboardStack-API
+   git clone https://github.com/LeonardoCides/KeyboardStack-API
    ```
 2. **Install dependencies:**
    ``` bash
