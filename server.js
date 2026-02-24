@@ -3,13 +3,11 @@ const app = express();
 const estoque = require('./estoque');
 const realizarVenda = require("./vendas")
 
-
 app.use(express.json());
 
 app.get("/" ,(req,res) => {
     res.send("Server on");
 });
-
 app.post("/estoque", (req, res) => {
     const novoProduto = req.body;
     if(!novoProduto){
@@ -17,7 +15,6 @@ app.post("/estoque", (req, res) => {
     }
     res.send(estoque.push(novoProduto))
 });
-
 app.patch("/estoque/vender/:id", (req, res) => {
     try{
         const produtoAtualizado = realizarVenda(Number(req.params.id));
@@ -27,13 +24,19 @@ app.patch("/estoque/vender/:id", (req, res) => {
         res.status(status).json({erro: e.message})
     }
 });
-
+app.delete("/estoque/:id", (req, res) =>{
+    const id = Number(req.params.id);
+    const index = estoque.findIndex(p => p.id === id);
+    if(index -1){
+        return res.status(404).json({mensagem: "ID informado inexistente!"});
+    }
+    estoque.splice(index, 1);
+    res.status(200).json("Item excluido com sucesso!");
+});
 app.get("/estoque", (req,res) => {
     res.status(200).json(estoque);
     
 });
-
-//SUBIR NO SERVER NA PORTA 3000
 app.listen(3000, ()=>{
     console.log("Server rodando na porta 3000.")
 })
