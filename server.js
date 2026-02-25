@@ -38,6 +38,20 @@ app.patch("/estoque/vender/:id", (req, res) => {
     }
 });
 
+//ATUALIZAR ID DO PRODUTO
+app.post("/estoque/:id", (req, res) =>{
+    const id = Number(req.params.id);
+    const index = estoque.findIndex(p => p.id === id);
+    if(index === -1){
+        res.status(404).json("ID invalido!");
+    };
+    estoque[index].quantidade = (estoque[index].quantidade || 0) + 1
+    res.status(200).json({
+        mensagem: "Estoque atualizado com sucesso!",
+        produto: estoque[index]
+    });
+});
+
 //DELETAR UM PRODUTO DO ESTOQUE
 app.delete("/estoque/:id", (req, res) =>{
     const id = Number(req.params.id);
