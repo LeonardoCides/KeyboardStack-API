@@ -42,5 +42,5 @@ An efficient and minimalistic REST API designed to manage mechanical keyboard in
 ```
 3. **Start the server:**
    ``` bash
-      nodemon server(mysql).js
+      nodemon server(sql).js
    ```
