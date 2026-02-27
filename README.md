@@ -6,6 +6,7 @@
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 
 An efficient REST API designed to manage mechanical keyboard inventory with integrated Python data intelligence for automatic report generation.
+
 <div align="center">
   <img src="terminal.png" alt="Terminal Preview" width="600px">
 </div>
@@ -46,7 +47,7 @@ An efficient REST API designed to manage mechanical keyboard inventory with inte
 ```
 4. **Install Python Dependencies::**
    ``` bash
-      pip install mysql-connector-python python-dotenv fpdf
+   pip install mysql-connector-python python-dotenv fpdf
    ```
 5. **Setup Environment Variables:**
    Create a .env file in the root directory:
@@ -55,8 +56,9 @@ An efficient REST API designed to manage mechanical keyboard inventory with inte
    DB_USER=root
    DB_PASS=your_password
    DB_NAME=sistema_estoque
-   PORT=3000 ```
+   PORT=3000
+   ```
 6. **Start the server**:
    ```bash
-      npm start
+   npm start
    ```
