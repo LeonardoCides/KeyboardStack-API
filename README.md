@@ -6,7 +6,9 @@
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 
 An efficient REST API designed to manage mechanical keyboard inventory with integrated Python data intelligence for automatic report generation.
-
+<div align="center">
+  <img src="terminal.png" alt="Terminal Preview" width="600px">
+</div>
 ## 🚀 Features
 
 - **Inventory Management:** Full CRUD for keyboard stocks.
