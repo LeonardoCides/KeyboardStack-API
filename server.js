@@ -2,7 +2,6 @@
 const express = require("express");
 const { db, setupDatabase} = require("./mysql-init");
 
-//Importando config do ENV
 require("dotenv").config();
 const PORT = process.env.PORT;
 
