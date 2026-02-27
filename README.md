@@ -9,6 +9,7 @@ An efficient REST API designed to manage mechanical keyboard inventory with inte
 <div align="center">
   <img src="terminal.png" alt="Terminal Preview" width="600px">
 </div>
+
 ## 🚀 Features
 
 - **Inventory Management:** Full CRUD for keyboard stocks.
