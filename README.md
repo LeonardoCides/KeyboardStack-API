@@ -1,9 +1,12 @@
 # ⌨️ KeyboardStack API + Data Intelligence
 
 ![Node.js](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
 An efficient REST API designed to manage mechanical keyboard inventory with integrated Python data intelligence for automatic report generation.
 
@@ -13,19 +16,19 @@ An efficient REST API designed to manage mechanical keyboard inventory with inte
 
 ## 🚀 Features
 
+- **Interactive Dashboard:** Modern web interface to manage stock visually.
 - **Inventory Management:** Full CRUD for keyboard stocks.
-- **Sales Logic:** Automated stock decrease with validation.
-- **Data Intelligence:** Integrated Python script that analyzes stock levels.
-- **PDF Reporting:** Automatic generation of PDF reports for items with low stock.
+- **Data Intelligence:** Python script for stock analysis.
+- **PDF Reporting:** Automatic PDF reports for low-stock items.
 - **Auto-Setup:** Automatic MySQL table initialization on startup.
 
 ## 🛠️ Technologies
 
-- **Backend:** Node.js & Express.js
-- **Data Science/BI:** Python 3 (using `FPDF` & `mysql-connector`)
-- **Database:** MySQL
-- **Environment:** Dotenv for secure credential management
-
+- **Frontend:** HTML5, CSS3, and JavaScript (Vanilla).
+- **Backend:** Node.js & Express.js.
+- **Data Intelligence:** Python 3 (FPDF & mysql-connector).
+- **Database:** MySQL.
+  
 ## 🛣️ API Endpoints
 
 | Method | Endpoint | Description |
