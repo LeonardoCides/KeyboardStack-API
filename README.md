@@ -47,7 +47,9 @@ An efficient REST API designed to manage mechanical keyboard inventory with inte
 ```
 4. **Install Python Dependencies::**
    ``` bash
-   pip install mysql-connector-python python-dotenv fpdf
+     source venv/bin/activate  # Linux/Mac
+    .\venv\Scripts\activate   # Windows
+     pip install -r requirements.txt
    ```
 5. **Setup Environment Variables:**
    Create a .env file in the root directory:
@@ -60,5 +62,5 @@ An efficient REST API designed to manage mechanical keyboard inventory with inte
    ```
 6. **Start the server**:
    ```bash
-   npm start
+     npm start
    ```
