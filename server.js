@@ -30,4 +30,8 @@ app.listen(PORT || 4000, () => {
     console.log(`Server rodando na porta ${PORT} com MySQL.`);
 });
 setupDatabase();
+// ROTA INICIAL
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
