@@ -2,8 +2,8 @@ const express = require("express");
 const { db, setupDatabase} = require("../mysql-init");
 const router = express.Router();
 // ROTA INICIAL
-router.get("/", (req, res) => {
-    res.send("Server on com MySQL!");
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 module.exports = router;
 
