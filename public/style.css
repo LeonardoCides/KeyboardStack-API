@@ -1,0 +1,108 @@
+/* Configurações Gerais */
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-color: #f8fafc;
+    --accent-color: #22d3ee; /* Ciano do seu banner */
+    --success-color: #4ade80; /* Verde do seu banner */
+    --danger-color: #f43f5e;
+    --border-color: #334155;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+/* Header e Título */
+header {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    letter-spacing: -1px;
+}
+
+/* Botão de PDF (Destaque) */
+.btn-analise {
+    background-color: var(--accent-color);
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, hover 0.2s;
+}
+
+.btn-analise:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Tabela Estilizada */
+main {
+    width: 100%;
+    max-width: 900px;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th {
+    background-color: #334155;
+    padding: 15px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: var(--accent-color);
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Botões de Ação na Tabela */
+button {
+    background: transparent;
+    border: 1px solid var(--success-color);
+    color: var(--success-color);
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--success-color);
+    color: #000;
+}
