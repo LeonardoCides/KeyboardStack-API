@@ -2,7 +2,12 @@
 const express = require("express");
 const { db, setupDatabase} = require("./mysql-init");
 
+const app = express();
+app.use(express.json());
+app.use(express.static("public"));
 require("dotenv").config();
+
+//CONFIG DO ENV
 const PORT = process.env.PORT;
 
 // Importando ROTAS
@@ -11,8 +16,6 @@ const rotasEstoque = require("./routes/estoque");
 //Importando Banner
 const banner = require("./chalk");
 
-const app = express();
-app.use(express.json());
 
 const analiseRoutes = require("./routes/analise");
 app.use("/analise", analiseRoutes);
