@@ -11,6 +11,16 @@ const db = mysql.createPool({
 
 async function setupDatabase() {
     try {
+        const userTableQuery = `
+            CREATE TABLE IF NOT EXISTS usuarios (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            username VARCHAR(50) UNIQUE NOT NULL,
+            senha VARCHAR(255) NOT NULL,
+            role ENUM('root', 'vendedor') DEFAULT 'vendedor'
+            );
+                `;
+            await db.execute(userTableQuery);
+
         const query = `
             CREATE TABLE IF NOT EXISTS produtos (
                 id INT AUTO_INCREMENT PRIMARY KEY,
