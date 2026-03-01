@@ -1,108 +1,138 @@
-/* Configurações Gerais */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
 :root {
-    --bg-color: #0f172a;
-    --card-bg: #1e293b;
-    --text-color: #f8fafc;
-    --accent-color: #22d3ee; /* Ciano do seu banner */
-    --success-color: #4ade80; /* Verde do seu banner */
-    --danger-color: #f43f5e;
-    --border-color: #334155;
+    --bg-black: #000000;
+    --text-white: #ffffff;
+    --text-gray: #888888;
+    --border-subtle: rgba(255, 255, 255, 0.1);
+    --accent-green: #4ade80;
 }
 
 body {
-    font-family: 'Inter', system-ui, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-black);
+    /* Efeito de grade de pontos inspirado na imagem */
+    background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+    background-size: 40px 40px; 
+    color: var(--text-white);
     margin: 0;
+    padding: 100px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* Header e Título */
-header {
-    width: 100%;
-    max-width: 900px;
+/* Badge de Status superior */
+.status-badge {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-subtle);
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent-green);
     margin-bottom: 30px;
 }
 
+.status-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--accent-green);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--accent-green);
+}
+
+/* Título de alto impacto */
 h1 {
-    font-size: 1.8rem;
-    letter-spacing: -1px;
+    font-size: clamp(2.5rem, 8vw, 4.5rem); /* Tamanho responsivo */
+    font-weight: 500;
+    letter-spacing: -3px;
+    margin: 0 0 60px 0;
+    text-align: center;
+    max-width: 900px;
+    line-height: 1;
 }
 
-/* Botão de PDF (Destaque) */
-.btn-analise {
-    background-color: var(--accent-color);
-    color: #000;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.2s, hover 0.2s;
-}
-
-.btn-analise:hover {
-    transform: scale(1.05);
-    filter: brightness(1.1);
-}
-
-/* Tabela Estilizada */
+/* Container da Tabela Minimalista */
 main {
     width: 100%;
-    max-width: 900px;
-    background-color: var(--card-bg);
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    max-width: 1000px;
+    animation: fadeIn 1s ease-out;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    text-align: left;
 }
 
 th {
-    background-color: #334155;
-    padding: 15px;
-    font-size: 0.85rem;
+    color: var(--text-gray);
+    font-size: 11px;
+    font-weight: 500;
     text-transform: uppercase;
-    color: var(--accent-color);
+    letter-spacing: 2px;
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-subtle);
 }
 
 td {
-    padding: 15px;
-    border-bottom: 1px solid var(--border-color);
+    padding: 30px 20px;
+    font-size: 16px;
+    border-bottom: 1px solid var(--border-subtle);
+    transition: all 0.3s ease;
 }
 
-tr:last-child td {
-    border-bottom: none;
+tr:hover td {
+    color: var(--accent-green);
+    background: rgba(255, 255, 255, 0.02);
 }
 
-tr:hover {
-    background-color: rgba(255, 255, 255, 0.03);
-}
-
-/* Botões de Ação na Tabela */
-button {
-    background: transparent;
-    border: 1px solid var(--success-color);
-    color: var(--success-color);
-    padding: 6px 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 0.8rem;
-    transition: 0.3s;
-}
-
-button:hover {
-    background-color: var(--success-color);
+/* Botão de PDF (Estilo "START NOW") */
+.btn-analise {
+    background-color: var(--text-white);
     color: #000;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 100px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Botão de Venda (Estilo "VIEW WORK") */
+.btn-venda {
+    background-color: transparent;
+    color: var(--text-white);
+    border: 1px solid var(--border-subtle);
+    padding: 10px 24px;
+    border-radius: 100px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-venda:hover {
+    background-color: var(--text-white);
+    color: #000;
+}
+
+.btn-analise:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
